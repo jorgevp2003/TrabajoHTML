@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+</head>
+<body>
+   
+    <div class="menu">
+        <div class="Opciones">
+
+            <!--Opcion de Home-->
+
+            <div style="display: flex;">
+                <img class="home" src="Iconos/home.png" alt="">
+                <p>Inicio</p>     
+            </div>
+
+            <!--Opcion de Buscar-->
+
+           <div style="display: flex;">
+                <img class="home" src="Iconos/buscar.png" alt="">
+                <p>Buscar</p>
+           </div>
+
+           <!--Opcion de Recomendado-->
+
+           <div style="display: flex;">
+                <img class="estrella" src="Iconos/estrella.png" alt="">
+                <p>Recomendado</p>
+           </div>
+
+           <!--Opcion de Peliculas-->
+           
+           <div style="display: flex;">
+                <img class="home" src="Iconos/cine.png" alt="">
+                <p>Peliculas</p>
+           </div>
+
+           <!--Opcion de Series-->
+
+           <div style="display: flex;">
+                <img class="home" src="Iconos/serie.png" alt="">
+                <p>Series   </p>
+           </div>
+
+        </div>
+        <!--Fin opciones-->
+
+        <!--- Inicio de sesion -->
+
+        <div class="Inicio">
+            <p>Iniciar Sesion</p>
+        </div>
+
+    </div>
+
+    <!--Fin de menu de opciones-->
+
+    
+
+    <!--Carrusel------------------------------------------------------------------------------------------------------------------------>
+    <div class="carrusel">
+    <div class="carousel-container">
+    <div class="carousel-track">
+
+        <div class="Pelicula1">
+            <p class="Titulo">Spiderman 3  </p>
+            <p class="Empresa">Marvel Studios</p>
+        </div>
+        <div class="Pelicula2">
+            <p class="Titulo">Transformers 1 </p>
+            <p class="Empresa">Hasbo</p>
+        </div>
+        <div class="Pelicula3">
+            <p class="Titulo">Batman  </p>
+            <p class="Titulo2">El caballero oscuro</p>
+            <p class="Empresa">DC Comics</p>
+        </div>
+
+        
+    </div>
+    <button class="carousel-button izquierda">&lt;</button>
+    <button class="carousel-button derecha">&gt;</button>
+</div>
+
+<script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.carousel-button.derecha');
+    const prevButton = document.querySelector('.carousel-button.izquierda');
+    const slideWidth = slides[0].getBoundingClientRect().width;
+
+    // Acomoda los slides uno junto al otro
+    slides.forEach((slide, index) => {
+        slide.style.left = `${slideWidth * index}px`;
+    });
+
+    let currentSlideIndex = 0;
+
+    function moveToSlide(track, currentIndex, targetIndex) {
+        const amountToMove = -slideWidth * targetIndex;
+        track.style.transform = `translateX(${amountToMove}px)`;
+        currentSlideIndex = targetIndex;
+    }
+
+    // Botón "Siguiente"
+    nextButton.addEventListener('click', () => {
+        const targetIndex = (currentSlideIndex + 1) % slides.length;
+        moveToSlide(track, currentSlideIndex, targetIndex);
+    });
+
+    // Botón "Anterior"
+    prevButton.addEventListener('click', () => {
+        const targetIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+        moveToSlide(track, currentSlideIndex, targetIndex);
+    });
+</script>
+</div>
+
+<!--Nuevo carrusel----------------------------------------------------------------------------------------------->
+
+
+<div>
+    
+    <div class="carrusel-1">
+        <h2>Top 2024</h2>
+        
+    </div>
+
+    
+    <div class="peliculas">
+        <div class="peliculas-track">
+            <div class="peliculas-item item-1"></div>
+            <div class="peliculas-item item-2"></div>
+            <div class="peliculas-item item-3"></div>
+            <div class="peliculas-item item-4"></div>
+            <div class="peliculas-item item-5"></div>
+            <div class="peliculas-item item-6"></div>
+            <div class="peliculas-item item-7"></div>
+            <div class="peliculas-item item-8"></div>
+            <div class="peliculas-item item-9"></div>
+            <div class="peliculas-item item-10"></div>
+        </div>
+        <button class="boton boton-izquierda" disabled><</button>
+        <button class="boton boton-derecha">></button>
+    </div>
+
+    <script>
+       
+        const trackPeliculas = document.querySelector('.peliculas-track');
+        const itemsPeliculas = document.querySelectorAll('.peliculas-item');
+        const btnIzquierdaPeliculas = document.querySelector('.peliculas .boton-izquierda');
+        const btnDerechaPeliculas = document.querySelector('.peliculas .boton-derecha');
+
+        let indexPeliculas = 0;
+        const visiblePeliculas = 5;                                    // Número de peliculas visibles
+        const totalPeliculas = itemsPeliculas.length;
+        const itemWidthPeliculas = itemsPeliculas[0].offsetWidth + 20; // Ancho de cada pelicula (incluye gap)
+
+        const updateButtonsPeliculas = () => {
+            btnIzquierdaPeliculas.disabled = indexPeliculas === 0;
+            btnDerechaPeliculas.disabled = indexPeliculas >= totalPeliculas - visiblePeliculas;
+        };
+
+        const movePeliculasToLeft = () => {
+            if (indexPeliculas > 0) {
+                indexPeliculas--;
+                trackPeliculas.style.transform = `translateX(-${itemWidthPeliculas * indexPeliculas}px)`;
+                updateButtonsPeliculas();
+            }
+        };
+
+        const movePeliculasToRight = () => {
+            if (indexPeliculas < totalPeliculas - visiblePeliculas) {
+                indexPeliculas++;
+                trackPeliculas.style.transform = `translateX(-${itemWidthPeliculas * indexPeliculas}px)`;
+                updateButtonsPeliculas();
+            }
+        };
+
+        btnIzquierdaPeliculas.addEventListener('click', movePeliculasToLeft);
+        btnDerechaPeliculas.addEventListener('click', movePeliculasToRight);
+
+        // Configuración inicial
+        updateButtonsPeliculas();
+    </script>
+    
+
+</div>
+
+
+    
+</body>
+
+</html>

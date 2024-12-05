@@ -1,0 +1,302 @@
+body{
+    background-color: rgb(60, 60, 60);
+}
+/*Inicio de creacion del menu*/
+.menu{
+    display:flex;
+    gap: 1%;
+    
+    background-color: rgb(42, 42, 42);
+}
+/*Opciones del menu*/
+.Opciones{
+    
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 2%;
+    font-size: 25px;
+    color: white;
+}
+/*Iconos de las opciones*/
+.home{
+    height: 50px;
+    margin-top: 10%;
+    
+}
+/*Separado porque tiene un tamaño diferente*/
+.estrella{
+    height: 50px;
+    margin-top: 7%;
+    
+}
+/*Inicio de sesion*/
+.Inicio{
+display:flex;
+justify-content: end;
+width: 25%;
+font-size: 25px;
+padding-right: 5%;
+color: white;
+}
+.rotacion_pelis{
+    display: flex;
+    justify-content: center;
+}
+
+/*Pelicula 1 Spiderman 3*/
+
+/*Fondo y tamaño*/
+.Pelicula1{
+
+    margin: 2%;
+    font-size: 90px;  
+    color: white;
+    height: 500px;
+    width: 40%;
+    background-image: url(Peliculas/Spiderman4.jpeg);
+    background-size: 1300px;
+    background-repeat: no-repeat;
+    
+}
+
+/*Nombre de la pelicula*/
+
+.Pelicula1 .Titulo{
+    padding-top: 5%;
+    padding-left:2% ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifc;
+    color: rgb(225, 225, 225);
+
+    
+    text-shadow: 5px 5px 5px black;
+    height: 5%;
+}
+
+/*Productor de la empresa*/
+
+.Pelicula1 .Empresa{
+    font-size:50px;
+    padding-left: 5%;
+    color: rgb(225, 225, 225);
+    border-radius: 2px;
+    text-shadow: 5px 5px 5px black;
+}
+
+/*Pelicula 2 Moby Dick*/
+
+/*Fondo y tamaño*/
+.Pelicula2{
+
+    margin: 2%;
+    font-size: 90px;  
+    color: white;
+    height: 500px;
+    width: 40%;
+    background-image: url(Peliculas/Tranformer.jpg);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    
+}
+
+/*Nombre de la pelicula*/
+
+.Pelicula2 .Titulo{
+    padding-top: 5%;
+    padding-left:2% ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifc;
+    color: rgb(225, 225, 225);
+
+    
+    text-shadow: 5px 5px 5px black;
+    height: 5%;
+}
+
+/*Productor de la empresa*/
+
+.Pelicula2 .Empresa{
+    font-size:50px;
+    padding-left: 5%;
+    
+    color: rgb(225, 225, 225);
+    border-radius: 2px;
+    text-shadow: 5px 5px 5px black;
+}
+
+/*Pelicula 3 Moby Dick*/
+
+/*Fondo y tamaño*/
+.Pelicula3{
+    height: 500px;
+    margin: 2%;
+    font-size: 90px;  
+    color: rgb(45, 45, 45);
+    background-image: url(Peliculas/BatmanElCaballeroOscuro.jpg);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    
+}
+
+/*Nombre de la pelicula*/
+
+.Pelicula3 .Titulo{
+    
+    padding-left:4% ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifc;
+    color: rgb(0, 0, 0);
+    
+    
+    height: 0%;
+}
+.Pelicula3 .Titulo2{
+    padding-left:2% ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifc;
+    color: rgb(0, 0, 0);
+    height: 1%;
+    font-size: 60%;
+}
+
+/*Productor de la empresa*/
+
+.Pelicula3 .Empresa{
+    font-size:30px;
+    padding-left: 5%;
+    color: rgb(0, 0, 0);
+    border-radius: 2px;
+    
+}
+
+/*Carrusel-----------------------------------------------------------------------------------------------------------------*/
+
+.carrusel{
+    width: 100%;
+}
+
+
+.carousel-container {
+    margin-top: 2%;
+    margin-left:10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 550px;
+    overflow: hidden; /* Oculta los elementos fuera del área visible */
+    
+    border-radius: 10px;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animación de deslizamiento */
+}
+
+.Pelicula1 {
+    min-width: 96%; /* Cada slide ocupa todo el ancho del contenedor */
+
+    box-sizing: border-box;
+}
+.Pelicula2 {
+    min-width: 96%; /* Cada slide ocupa todo el ancho del contenedor */
+
+    box-sizing: border-box;
+}
+.Pelicula3 {
+    min-width: 96%; /* Cada slide ocupa todo el ancho del contenedor */
+
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Botones de navegación */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 15px;
+    z-index: 10;
+}
+
+.carousel-botton.izquierda {
+    left: 10px;
+}
+
+.carousel-button.derecha {
+    right: 10px;
+}
+
+
+
+/*Segundo carrusel-------------------------------------------------------------------------------------*/
+
+
+.carrusel-1 {
+    margin-bottom: 50px;
+}
+
+/* Carrusel 2 (Películas) */
+.peliculas {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.peliculas-track {
+    display: flex;
+    gap: 20px; /* Espaciado entre los elementos */
+    padding: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+.peliculas-item {
+    flex: 0 0 calc(20% - 20px); /* Ocupa el 20% del ancho menos el espacio */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Imágenes del segundo carrusel */
+.item-1 { background-image: url('Peliculas/BatmanElCaballeroOscuro.jpg'); }
+.item-2 { background-image: url('Peliculas/MobyDick.jpg'); }
+.item-3 { background-image: url('Peliculas/Spiderman1.jpeg'); }
+.item-4 { background-image: url('Peliculas/Spiderman2.jpg'); }
+.item-5 { background-image: url('Peliculas/Spiderman3.jpg'); }
+.item-6 { background-image: url('Peliculas/Spiderman4.jpeg'); }
+.item-7 { background-image: url('Peliculas/Tranformer.jpg'); }
+.item-8 { background-image: url('Peliculas/Venom.jpg'); }
+.item-9 { background-image: url('Peliculas/Especialista.png'); }
+.item-10 { background-image: url('Peliculas/MadMAx.png'); }
+
+.boton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+.boton-izquierda {
+    left: 0;
+}
+.boton-derecha {
+    right: 0;
+}
+.boton[disabled] {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+}
