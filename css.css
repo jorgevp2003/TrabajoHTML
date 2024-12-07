@@ -9,8 +9,16 @@ body{
     background-color: rgb(42, 42, 42);
 }
 /*Opciones del menu*/
-.Opciones{
+.Opciones {
     
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 2%;
+    font-size: 25px;
+    color: white;
+}
+.tit{
     width: 70%;
     display: flex;
     justify-content: space-evenly;
@@ -22,12 +30,14 @@ body{
 .home{
     height: 50px;
     margin-top: 10%;
+    margin-right: 5%;
     
 }
 /*Separado porque tiene un tamaño diferente*/
 .estrella{
     height: 50px;
     margin-top: 7%;
+    margin-right: 8%;
     
 }
 /*Inicio de sesion*/
@@ -299,4 +309,11 @@ color: white;
 .boton[disabled] {
     background-color: rgba(0, 0, 0, 0.2);
     cursor: not-allowed;
+}
+/*Final*/
+.end{
+    margin-right: 15%;
+    margin-left: 15%;
+    display: flex;
+    justify-content: space-evenly;
 }
