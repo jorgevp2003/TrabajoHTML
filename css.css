@@ -317,3 +317,16 @@ color: white;
     display: flex;
     justify-content: space-evenly;
 }
+
+
+/*PAGINA DE BUSCAR*/
+
+.imagenes{
+    margin: 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.img2{
+    height: 250px;
+    width: 250px;
+}
