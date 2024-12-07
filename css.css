@@ -321,6 +321,13 @@ color: white;
 
 /*PAGINA DE BUSCAR*/
 
+.buscador{
+    margin-right: 15%;
+    margin-left: 15%;
+
+    width: 70%;
+    height: 40px;
+}
 .imagenes{
     margin: 5%;
     display: flex;
@@ -329,4 +336,11 @@ color: white;
 .img2{
     height: 250px;
     width: 250px;
+}
+
+.TitBuscar{
+    color: white;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
 }
